@@ -9,7 +9,7 @@ import Foundation
 
 struct DarknetTxtToJsonResponse: Codable {
     let imagefilename:String
-    let annotation:Annotation
+    let annotation:[Annotation]
     
     struct Annotation: Codable {
         let coordinates:Coordinate

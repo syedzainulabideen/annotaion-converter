@@ -793,6 +793,9 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <color key="bezelColor" red="0.23137254900000001" green="0.70980392160000005" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="processFiles:" target="wkN-y3-ren" id="OYq-ca-PaV"/>
+                                                </connections>
                                             </button>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CjB-UU-AMb">
                                                 <rect key="frame" x="127" y="262" width="106" height="16"/>

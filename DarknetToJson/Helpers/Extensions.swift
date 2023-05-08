@@ -13,3 +13,8 @@ extension String {
         return (Float(self) ?? 0.0)
     }
 }
+
+
+enum ConverterError: Error {
+    case unableToProcess
+}

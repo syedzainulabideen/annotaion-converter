@@ -17,6 +17,7 @@
 		8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */; };
 		8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */; };
 		8A917D692A08C34F00846BE0 /* DarknetTxtToJsonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D682A08C34F00846BE0 /* DarknetTxtToJsonController.swift */; };
+		8A917D6C2A08FD4300846BE0 /* TxtToJsonConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D6B2A08FD4300846BE0 /* TxtToJsonConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsHelper.swift; sourceTree = "<group>"; };
 		8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarknetTxtToJson.swift; sourceTree = "<group>"; };
 		8A917D682A08C34F00846BE0 /* DarknetTxtToJsonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarknetTxtToJsonController.swift; sourceTree = "<group>"; };
+		8A917D6B2A08FD4300846BE0 /* TxtToJsonConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtToJsonConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				8A917D4D2A02432300846BE0 /* ViewController.swift */,
 				8A917D672A08C33600846BE0 /* Controllers */,
 				8A917D5A2A02459C00846BE0 /* DragView.swift */,
+				8A917D6A2A08FD2B00846BE0 /* Converters */,
 				8A917D662A08B2E200846BE0 /* Helpers */,
 				8A917D632A08B28200846BE0 /* Resonse Objects */,
 				8A917D4F2A02432600846BE0 /* Assets.xcassets */,
@@ -100,6 +103,14 @@
 				8A917D682A08C34F00846BE0 /* DarknetTxtToJsonController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8A917D6A2A08FD2B00846BE0 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				8A917D6B2A08FD4300846BE0 /* TxtToJsonConverter.swift */,
+			);
+			path = Converters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A917D6C2A08FD4300846BE0 /* TxtToJsonConverter.swift in Sources */,
 				8A917D4E2A02432300846BE0 /* ViewController.swift in Sources */,
 				8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */,
 				8A917D4C2A02432300846BE0 /* AppDelegate.swift in Sources */,

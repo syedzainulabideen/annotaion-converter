@@ -10,3 +10,8 @@ import Foundation
 protocol FileURLsProvider: AnyObject {
     func inputFilesDidSelected(_ files:[String])
 }
+
+
+protocol ConvertableProtocol: AnyObject {
+    func convertGeneric(_ paths: [String]) -> [DarknetTxtToJsonResponse]?
+}
