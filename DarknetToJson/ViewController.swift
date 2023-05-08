@@ -8,13 +8,23 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    @IBOutlet weak var inputView:DropView!
+    @IBOutlet weak var leftContentView:NSView!
+    @IBOutlet weak var rightContentView:NSView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.preferredContentSize = NSSize(width: 800, height: 500)
+        
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = NSColor.white.cgColor
+        
+        self.leftContentView.layer?.backgroundColor = NSColor.purple.cgColor
+        self.rightContentView.layer?.backgroundColor = NSColor.lightGray.withAlphaComponent(0.3).cgColor
+    }
+    
+    override func viewWillAppear() {
+        self.view.window?.isMovable = true
     }
 
     override var representedObject: Any? {
@@ -22,44 +32,11 @@ class ViewController: NSViewController {
 
         }
     }
-}
-
-
-extension ViewController {
-    func createJsonForFiles(_ paths:[String]) {
-        var allResponse = [DarknetTxtToJsonResponse]()
-        for path in paths {
-            print(path)
-            do {
-                let selectedFile = URL(filePath: path)
-                    guard let content = String(data: try Data(contentsOf: selectedFile), encoding: .utf8) else { return }
-                
-                    let fileName = selectedFile.lastPathComponent.replacingOccurrences(of: ".txt", with: ".jpg")
-                
-                    let fromURL = URL(filePath: "/Users/mac8/Desktop/images/\(fileName)")
-                    let toURL = URL(filePath: "/Users/mac8/Desktop/dataset/\(fileName)")
-                    try? FileManager.default.copyItem(at: fromURL, to: toURL)
-                
-                    defer { selectedFile.stopAccessingSecurityScopedResource() }
-                    if content.count > 0  {
-                        let data = content.components(separatedBy: " ")
-                        let label = data[0]
-                        let x = data[1].floatVal
-                        let y = data[2].floatVal
-                        let width = data[3].floatVal
-                        let height = data[4].replacingOccurrences(of: "\r\n2", with: "").replacingOccurrences(of: "\r\n", with: "").floatVal
-                        let option = DarknetTxtToJsonResponse(imagefilename: fileName, annotation: DarknetTxtToJsonResponse.Annotation(coordinates: DarknetTxtToJsonResponse.Coordinate(y: y, x: x, height: height, width: width), label: label))
-                        allResponse.append(option)
-                    }
-            }
-            catch {
-                print("\(path) -> \(error.localizedDescription)")
-            }
-        }
-        
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        let data = try! encoder.encode(allResponse)
-        print(String(data: data, encoding: .utf8)!)
+    
+    @IBAction func txtToJsonButtonPressed(_ button:NSButton) {
+        guard let controller:DarknetTxtToJsonController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "DarknetTxtToJsonController") as? DarknetTxtToJsonController else { return }
+        self.view.window?.contentViewController = controller
     }
 }
+
+

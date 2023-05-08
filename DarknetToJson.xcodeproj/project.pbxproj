@@ -16,6 +16,7 @@
 		8A917D602A08B09500846BE0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D5F2A08B09500846BE0 /* Extensions.swift */; };
 		8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */; };
 		8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */; };
+		8A917D692A08C34F00846BE0 /* DarknetTxtToJsonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D682A08C34F00846BE0 /* DarknetTxtToJsonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8A917D5F2A08B09500846BE0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsHelper.swift; sourceTree = "<group>"; };
 		8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarknetTxtToJson.swift; sourceTree = "<group>"; };
+		8A917D682A08C34F00846BE0 /* DarknetTxtToJsonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarknetTxtToJsonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				8A917D4B2A02432300846BE0 /* AppDelegate.swift */,
 				8A917D4D2A02432300846BE0 /* ViewController.swift */,
+				8A917D672A08C33600846BE0 /* Controllers */,
 				8A917D5A2A02459C00846BE0 /* DragView.swift */,
 				8A917D662A08B2E200846BE0 /* Helpers */,
 				8A917D632A08B28200846BE0 /* Resonse Objects */,
@@ -89,6 +92,14 @@
 				8A917D5F2A08B09500846BE0 /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8A917D672A08C33600846BE0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A917D682A08C34F00846BE0 /* DarknetTxtToJsonController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */,
 				8A917D4C2A02432300846BE0 /* AppDelegate.swift in Sources */,
 				8A917D5B2A02459C00846BE0 /* DragView.swift in Sources */,
+				8A917D692A08C34F00846BE0 /* DarknetTxtToJsonController.swift in Sources */,
 				8A917D602A08B09500846BE0 /* Extensions.swift in Sources */,
 				8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */,
 			);

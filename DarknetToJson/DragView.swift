@@ -18,12 +18,8 @@ class DropView: NSView {
         super.init(coder: coder)
 
         self.wantsLayer = true
-        self.layer?.backgroundColor = NSColor.purple.withAlphaComponent(0.3).cgColor
+        self.layer?.backgroundColor = NSColor.black.cgColor
         registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
-        
-        self.layer?.borderWidth = 2
-        self.layer?.borderColor = NSColor.purple.cgColor
-        self.layer?.cornerRadius = 8
     }
 
     override func draw(_ dirtyRect: NSRect) {

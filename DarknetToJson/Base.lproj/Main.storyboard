@@ -678,14 +678,14 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-105" y="-146"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -699,36 +699,185 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-92" y="56"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DarknetToJson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dashboard" id="XfG-lQ-9wD" customClass="ViewController" customModule="DarknetToJson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="aqua" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="740" height="464"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1488" height="936"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="UkM-zm-J4l" customClass="DropView" customModule="DarknetToJson" customModuleProvider="target">
-                                <rect key="frame" x="270" y="132" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="DHa-G2-93M"/>
-                                    <constraint firstAttribute="height" constant="200" id="OZp-bo-y43"/>
-                                </constraints>
-                            </customView>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-mI-VR9">
+                                <rect key="frame" x="0.0" y="0.0" width="1488" height="936"/>
+                                <subviews>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fjk-du-S0B">
+                                        <rect key="frame" x="0.0" y="472" width="744" height="464"/>
+                                    </customView>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-XA-o4f">
+                                        <rect key="frame" x="744" y="472" width="744" height="464"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-HT-5Lo">
+                                                <rect key="frame" x="253" y="275" width="116" height="32"/>
+                                                <buttonCell key="cell" type="push" title="TXT -&gt; JSON" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6x3-V7-iua">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="wkN-y3-ren" kind="show" id="jMx-sG-JLl"/>
+                                                </connections>
+                                            </button>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-FR-6g2">
+                                                <rect key="frame" x="28" y="415" width="688" height="24"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Select converter option below:" id="M9h-Pu-nZ2">
+                                                    <font key="font" metaFont="system" size="20"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8a7-HT-5Lo" firstAttribute="centerY" secondItem="y0d-XA-o4f" secondAttribute="centerY" constant="-60" id="46t-Db-CIJ"/>
+                                            <constraint firstItem="8a7-HT-5Lo" firstAttribute="centerX" secondItem="y0d-XA-o4f" secondAttribute="centerX" constant="-61" id="9sJ-qL-FAd"/>
+                                            <constraint firstItem="EbH-FR-6g2" firstAttribute="leading" secondItem="y0d-XA-o4f" secondAttribute="leading" constant="30" id="ATV-mq-ldQ"/>
+                                            <constraint firstItem="EbH-FR-6g2" firstAttribute="top" secondItem="y0d-XA-o4f" secondAttribute="top" constant="25" id="OQZ-Iv-2fW"/>
+                                            <constraint firstAttribute="trailing" secondItem="EbH-FR-6g2" secondAttribute="trailing" constant="30" id="ek4-Ja-PQX"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="UkM-zm-J4l" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="QgF-fe-DIG"/>
-                            <constraint firstItem="UkM-zm-J4l" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="voP-d8-GXC"/>
+                            <constraint firstItem="aoj-mI-VR9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ANd-GX-uC4"/>
+                            <constraint firstItem="aoj-mI-VR9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="UmZ-JE-4KN"/>
+                            <constraint firstAttribute="trailing" secondItem="aoj-mI-VR9" secondAttribute="trailing" id="kK0-Zr-bzC"/>
+                            <constraint firstAttribute="bottom" secondItem="aoj-mI-VR9" secondAttribute="bottom" id="vwN-PW-oPL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputView" destination="UkM-zm-J4l" id="WzV-F8-j8I"/>
+                        <outlet property="leftContentView" destination="Fjk-du-S0B" id="gLw-33-98j"/>
+                        <outlet property="rightContentView" destination="y0d-XA-o4f" id="lRt-q2-Fyt"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205" y="752"/>
+            <point key="canvasLocation" x="-92" y="897"/>
+        </scene>
+        <!--Darknet Txt To Json Controller-->
+        <scene sceneID="4zI-nC-9QL">
+            <objects>
+                <viewController storyboardIdentifier="DarknetTxtToJsonController" id="wkN-y3-ren" customClass="DarknetTxtToJsonController" customModule="DarknetToJson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="qAo-oo-eAl">
+                        <rect key="frame" x="0.0" y="0.0" width="726" height="560"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0d-dO-YCw">
+                                <rect key="frame" x="0.0" y="0.0" width="726" height="560"/>
+                                <subviews>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-hV-orY">
+                                        <rect key="frame" x="0.0" y="96" width="360" height="464"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8xy-Wv-0j8">
+                                                <rect key="frame" x="115" y="215" width="130" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Process Images" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cF1-CL-aCo">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <color key="bezelColor" red="0.23137254900000001" green="0.70980392160000005" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </button>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CjB-UU-AMb">
+                                                <rect key="frame" x="127" y="262" width="106" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="0 file(s) selected" id="Zdd-nL-Tq6">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8xy-Wv-0j8" firstAttribute="centerY" secondItem="9Gf-hV-orY" secondAttribute="centerY" id="4A8-P8-rA3"/>
+                                            <constraint firstItem="8xy-Wv-0j8" firstAttribute="centerX" secondItem="9Gf-hV-orY" secondAttribute="centerX" id="fI5-WF-HRL"/>
+                                            <constraint firstItem="8xy-Wv-0j8" firstAttribute="top" secondItem="CjB-UU-AMb" secondAttribute="bottom" constant="20" id="t7U-ZW-sgu"/>
+                                            <constraint firstItem="CjB-UU-AMb" firstAttribute="centerX" secondItem="9Gf-hV-orY" secondAttribute="centerX" id="v5Q-hH-OqC"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="kDV-y3-sLy" customClass="DropView" customModule="DarknetToJson" customModuleProvider="target">
+                                        <rect key="frame" x="360" y="96" width="366" height="464"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-lU-1P4">
+                                                <rect key="frame" x="158" y="227" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="64u-ZR-mVV"/>
+                                                    <constraint firstAttribute="width" constant="50" id="yqT-z1-ndd"/>
+                                                </constraints>
+                                                <imageCell key="cell" controlSize="large" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="file" id="5VV-n4-625"/>
+                                                <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FD7-ln-bNZ">
+                                                <rect key="frame" x="145" y="188" width="77" height="19"/>
+                                                <textFieldCell key="cell" controlSize="large" lineBreakMode="clipping" title=".txt Files" id="6TE-AI-wfI">
+                                                    <font key="font" metaFont="systemBlack" size="16"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-n5-LBS">
+                                                <rect key="frame" x="122" y="171" width="123" height="17"/>
+                                                <textFieldCell key="cell" controlSize="large" lineBreakMode="clipping" title="drop your file here" id="USx-Yd-dLy">
+                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FD7-ln-bNZ" firstAttribute="top" secondItem="dSk-lU-1P4" secondAttribute="bottom" constant="20" id="14w-m0-a3U"/>
+                                            <constraint firstItem="dSk-lU-1P4" firstAttribute="centerY" secondItem="kDV-y3-sLy" secondAttribute="centerY" constant="-20" id="EUd-pQ-gZU"/>
+                                            <constraint firstItem="ef6-n5-LBS" firstAttribute="top" secondItem="FD7-ln-bNZ" secondAttribute="bottom" id="OB2-W2-fS5"/>
+                                            <constraint firstItem="ef6-n5-LBS" firstAttribute="centerX" secondItem="kDV-y3-sLy" secondAttribute="centerX" id="Xwy-OS-qn1"/>
+                                            <constraint firstItem="dSk-lU-1P4" firstAttribute="centerX" secondItem="kDV-y3-sLy" secondAttribute="centerX" id="cxJ-8n-Nak"/>
+                                            <constraint firstItem="FD7-ln-bNZ" firstAttribute="centerX" secondItem="kDV-y3-sLy" secondAttribute="centerX" id="e1Z-TG-Bo5"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="l0d-dO-YCw" secondAttribute="bottom" id="NlZ-1u-DbO"/>
+                            <constraint firstItem="l0d-dO-YCw" firstAttribute="leading" secondItem="qAo-oo-eAl" secondAttribute="leading" id="UZW-E8-nV6"/>
+                            <constraint firstAttribute="trailing" secondItem="l0d-dO-YCw" secondAttribute="trailing" id="vxX-Z8-fbS"/>
+                            <constraint firstItem="l0d-dO-YCw" firstAttribute="top" secondItem="qAo-oo-eAl" secondAttribute="top" id="x3c-g4-cDS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filesCountLabel" destination="CjB-UU-AMb" id="MCb-bl-HL1"/>
+                        <outlet property="inputView" destination="kDV-y3-sLy" id="nR5-Ft-buq"/>
+                        <outlet property="optionView" destination="9Gf-hV-orY" id="7jb-vF-cQt"/>
+                    </connections>
+                </viewController>
+                <customObject id="ejw-h4-64T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="1802"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="file" width="512" height="512"/>
+    </resources>
 </document>
