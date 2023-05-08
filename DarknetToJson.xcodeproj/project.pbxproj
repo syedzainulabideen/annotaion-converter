@@ -12,6 +12,10 @@
 		8A917D502A02432600846BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A917D4F2A02432600846BE0 /* Assets.xcassets */; };
 		8A917D532A02432600846BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A917D512A02432600846BE0 /* Main.storyboard */; };
 		8A917D5B2A02459C00846BE0 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D5A2A02459C00846BE0 /* DragView.swift */; };
+		8A917D5E2A026F9400846BE0 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8A917D5D2A026F9400846BE0 /* Anchorage */; };
+		8A917D602A08B09500846BE0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D5F2A08B09500846BE0 /* Extensions.swift */; };
+		8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */; };
+		8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,9 @@
 		8A917D522A02432600846BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A917D542A02432600846BE0 /* DarknetToJson.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DarknetToJson.entitlements; sourceTree = "<group>"; };
 		8A917D5A2A02459C00846BE0 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		8A917D5F2A08B09500846BE0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsHelper.swift; sourceTree = "<group>"; };
+		8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarknetTxtToJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A917D5E2A026F9400846BE0 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,11 +65,30 @@
 				8A917D4B2A02432300846BE0 /* AppDelegate.swift */,
 				8A917D4D2A02432300846BE0 /* ViewController.swift */,
 				8A917D5A2A02459C00846BE0 /* DragView.swift */,
+				8A917D662A08B2E200846BE0 /* Helpers */,
+				8A917D632A08B28200846BE0 /* Resonse Objects */,
 				8A917D4F2A02432600846BE0 /* Assets.xcassets */,
 				8A917D512A02432600846BE0 /* Main.storyboard */,
 				8A917D542A02432600846BE0 /* DarknetToJson.entitlements */,
 			);
 			path = DarknetToJson;
+			sourceTree = "<group>";
+		};
+		8A917D632A08B28200846BE0 /* Resonse Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */,
+			);
+			path = "Resonse Objects";
+			sourceTree = "<group>";
+		};
+		8A917D662A08B2E200846BE0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */,
+				8A917D5F2A08B09500846BE0 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +107,9 @@
 			dependencies = (
 			);
 			name = DarknetToJson;
+			packageProductDependencies = (
+				8A917D5D2A026F9400846BE0 /* Anchorage */,
+			);
 			productName = DarknetToJson;
 			productReference = 8A917D482A02432300846BE0 /* DarknetToJson.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 8A917D3F2A02432200846BE0;
+			packageReferences = (
+				8A917D5C2A026F9400846BE0 /* XCRemoteSwiftPackageReference "Anchorage" */,
+			);
 			productRefGroup = 8A917D492A02432300846BE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,8 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A917D4E2A02432300846BE0 /* ViewController.swift in Sources */,
+				8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */,
 				8A917D4C2A02432300846BE0 /* AppDelegate.swift in Sources */,
 				8A917D5B2A02459C00846BE0 /* DragView.swift in Sources */,
+				8A917D602A08B09500846BE0 /* Extensions.swift in Sources */,
+				8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A917D5C2A026F9400846BE0 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A917D5D2A026F9400846BE0 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A917D5C2A026F9400846BE0 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A917D402A02432200846BE0 /* Project object */;
 }

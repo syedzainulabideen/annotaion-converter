@@ -7,29 +7,32 @@
 
 import Foundation
 import Cocoa
+import Anchorage
 
 class DropView: NSView {
-
     var filePath: String?
-    let expectedExt = ["txt"]  //file extensions allowed for Drag&Drop (example: "jpg","png","docx", etc..)
+    let expectedExt = ["txt"]
+    weak var delegate:FileURLsProvider?
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
         self.wantsLayer = true
-        self.layer?.backgroundColor = NSColor.gray.cgColor
-
+        self.layer?.backgroundColor = NSColor.purple.withAlphaComponent(0.3).cgColor
         registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
+        
+        self.layer?.borderWidth = 2
+        self.layer?.borderColor = NSColor.purple.cgColor
+        self.layer?.cornerRadius = 8
     }
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        // Drawing code here.
     }
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         if checkExtension(sender) == true {
-            self.layer?.backgroundColor = NSColor.blue.cgColor
+            self.layer?.backgroundColor = NSColor.white.cgColor
             return .copy
         } else {
             return NSDragOperation()
@@ -60,13 +63,12 @@ class DropView: NSView {
 
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         guard let pasteboard = sender.draggingPasteboard.propertyList(forType: NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")) as? NSArray,
-              let path = pasteboard[0] as? String
+              let paths = pasteboard as? [String]
         else { return false }
 
-        //GET YOUR FILE PATH !!!
-        self.filePath = path
-        Swift.print("FilePath: \(path)")
-
+        self.delegate?.inputFilesDidSelected(paths)
         return true
     }
 }
+
+
