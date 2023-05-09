@@ -7,7 +7,6 @@
 
 import Foundation
 import Cocoa
-import Anchorage
 
 class DropView: NSView {
     var filePath: String?

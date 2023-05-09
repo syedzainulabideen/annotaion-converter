@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A7565C52A0A30730006B044 /* OptionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7565C32A0A30730006B044 /* OptionItemView.swift */; };
+		8A7565C82A0A4A590006B044 /* ConverterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7565C72A0A4A590006B044 /* ConverterOption.swift */; };
 		8A917D4C2A02432300846BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D4B2A02432300846BE0 /* AppDelegate.swift */; };
 		8A917D4E2A02432300846BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D4D2A02432300846BE0 /* ViewController.swift */; };
 		8A917D502A02432600846BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A917D4F2A02432600846BE0 /* Assets.xcassets */; };
 		8A917D532A02432600846BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A917D512A02432600846BE0 /* Main.storyboard */; };
 		8A917D5B2A02459C00846BE0 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D5A2A02459C00846BE0 /* DragView.swift */; };
-		8A917D5E2A026F9400846BE0 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8A917D5D2A026F9400846BE0 /* Anchorage */; };
 		8A917D602A08B09500846BE0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D5F2A08B09500846BE0 /* Extensions.swift */; };
 		8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */; };
 		8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D642A08B2A100846BE0 /* DarknetTxtToJson.swift */; };
@@ -21,7 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A917D482A02432300846BE0 /* DarknetToJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarknetToJson.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7565C32A0A30730006B044 /* OptionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItemView.swift; sourceTree = "<group>"; };
+		8A7565C72A0A4A590006B044 /* ConverterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterOption.swift; sourceTree = "<group>"; };
+		8A917D482A02432300846BE0 /* Annotation-Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Annotation-Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A917D4B2A02432300846BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A917D4D2A02432300846BE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A917D4F2A02432600846BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A917D5E2A026F9400846BE0 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +60,7 @@
 		8A917D492A02432300846BE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A917D482A02432300846BE0 /* DarknetToJson.app */,
+				8A917D482A02432300846BE0 /* Annotation-Converter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,8 +70,9 @@
 			children = (
 				8A917D4B2A02432300846BE0 /* AppDelegate.swift */,
 				8A917D4D2A02432300846BE0 /* ViewController.swift */,
-				8A917D672A08C33600846BE0 /* Controllers */,
 				8A917D5A2A02459C00846BE0 /* DragView.swift */,
+				8A7565C32A0A30730006B044 /* OptionItemView.swift */,
+				8A917D672A08C33600846BE0 /* Controllers */,
 				8A917D6A2A08FD2B00846BE0 /* Converters */,
 				8A917D662A08B2E200846BE0 /* Helpers */,
 				8A917D632A08B28200846BE0 /* Resonse Objects */,
@@ -93,6 +96,7 @@
 			children = (
 				8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */,
 				8A917D5F2A08B09500846BE0 /* Extensions.swift */,
+				8A7565C72A0A4A590006B044 /* ConverterOption.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -116,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A917D472A02432200846BE0 /* DarknetToJson */ = {
+		8A917D472A02432200846BE0 /* Annotation-Converter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A917D572A02432600846BE0 /* Build configuration list for PBXNativeTarget "DarknetToJson" */;
+			buildConfigurationList = 8A917D572A02432600846BE0 /* Build configuration list for PBXNativeTarget "Annotation-Converter" */;
 			buildPhases = (
 				8A917D442A02432200846BE0 /* Sources */,
 				8A917D452A02432200846BE0 /* Frameworks */,
@@ -128,12 +132,11 @@
 			);
 			dependencies = (
 			);
-			name = DarknetToJson;
+			name = "Annotation-Converter";
 			packageProductDependencies = (
-				8A917D5D2A026F9400846BE0 /* Anchorage */,
 			);
 			productName = DarknetToJson;
-			productReference = 8A917D482A02432300846BE0 /* DarknetToJson.app */;
+			productReference = 8A917D482A02432300846BE0 /* Annotation-Converter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A917D432A02432200846BE0 /* Build configuration list for PBXProject "DarknetToJson" */;
+			buildConfigurationList = 8A917D432A02432200846BE0 /* Build configuration list for PBXProject "Annotation-Converter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,13 +164,12 @@
 			);
 			mainGroup = 8A917D3F2A02432200846BE0;
 			packageReferences = (
-				8A917D5C2A026F9400846BE0 /* XCRemoteSwiftPackageReference "Anchorage" */,
 			);
 			productRefGroup = 8A917D492A02432300846BE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A917D472A02432200846BE0 /* DarknetToJson */,
+				8A917D472A02432200846BE0 /* Annotation-Converter */,
 			);
 		};
 /* End PBXProject section */
@@ -190,7 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A917D6C2A08FD4300846BE0 /* TxtToJsonConverter.swift in Sources */,
+				8A7565C52A0A30730006B044 /* OptionItemView.swift in Sources */,
 				8A917D4E2A02432300846BE0 /* ViewController.swift in Sources */,
+				8A7565C82A0A4A590006B044 /* ConverterOption.swift in Sources */,
 				8A917D622A08B0CA00846BE0 /* ProtocolsHelper.swift in Sources */,
 				8A917D4C2A02432300846BE0 /* AppDelegate.swift in Sources */,
 				8A917D5B2A02459C00846BE0 /* DragView.swift in Sources */,
@@ -384,7 +388,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A917D432A02432200846BE0 /* Build configuration list for PBXProject "DarknetToJson" */ = {
+		8A917D432A02432200846BE0 /* Build configuration list for PBXProject "Annotation-Converter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A917D552A02432600846BE0 /* Debug */,
@@ -393,7 +397,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A917D572A02432600846BE0 /* Build configuration list for PBXNativeTarget "DarknetToJson" */ = {
+		8A917D572A02432600846BE0 /* Build configuration list for PBXNativeTarget "Annotation-Converter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A917D582A02432600846BE0 /* Debug */,
@@ -403,25 +407,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8A917D5C2A026F9400846BE0 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Rightpoint/Anchorage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8A917D5D2A026F9400846BE0 /* Anchorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8A917D5C2A026F9400846BE0 /* XCRemoteSwiftPackageReference "Anchorage" */;
-			productName = Anchorage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A917D402A02432200846BE0 /* Project object */;
 }

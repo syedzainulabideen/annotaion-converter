@@ -11,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="DarknetToJson" id="1Xt-HY-uBw">
+                            <menuItem title="Annotation-Converter" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="DarknetToJson" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Annotation-Converter" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About DarknetToJson" id="5kV-Vb-QxS">
+                                        <menuItem title="About Annotation-Converter" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide DarknetToJson" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Annotation-Converter" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit DarknetToJson" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Annotation-Converter" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -660,7 +660,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="DarknetToJson Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Annotation-Converter Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DarknetToJson" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Annotation_Converter" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -704,22 +704,100 @@
         <!--Dashboard-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="Dashboard" id="XfG-lQ-9wD" customClass="ViewController" customModule="DarknetToJson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dashboard" id="XfG-lQ-9wD" customClass="ViewController" customModule="Annotation_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="aqua" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1488" height="936"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1658" height="936"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-mI-VR9">
-                                <rect key="frame" x="0.0" y="0.0" width="1488" height="936"/>
+                            <stackView distribution="fillProportionally" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-mI-VR9">
+                                <rect key="frame" x="0.0" y="0.0" width="1658" height="936"/>
                                 <subviews>
                                     <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fjk-du-S0B">
-                                        <rect key="frame" x="0.0" y="472" width="744" height="464"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="936"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-MV-afb">
+                                                <rect key="frame" x="18" y="432" width="284" height="32"/>
+                                                <textFieldCell key="cell" alignment="center" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id="oD5-wW-lGy">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-tc-yt1">
+                                                <rect key="frame" x="18" y="469" width="284" height="29"/>
+                                                <textFieldCell key="cell" alignment="center" title="Your Annotations" id="lCs-uc-MZF">
+                                                    <font key="font" metaFont="systemSemibold" size="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qYl-xg-X29">
+                                                <rect key="frame" x="18" y="498" width="284" height="29"/>
+                                                <textFieldCell key="cell" alignment="center" title="Convert" id="V1C-hE-Gyu">
+                                                    <font key="font" metaFont="systemSemibold" size="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GdU-8T-qfZ">
+                                                <rect key="frame" x="120" y="557" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="fGr-47-Ck6"/>
+                                                    <constraint firstAttribute="height" constant="80" id="pv7-Ca-x7W"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="convert" id="uu1-rX-LUj"/>
+                                            </imageView>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-JF-gQG">
+                                                <rect key="frame" x="107" y="20" width="106" height="13"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="© syedzainulabideen" id="x9L-Ie-ML7">
+                                                    <font key="font" metaFont="system" size="10"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0fa-MV-afb" firstAttribute="centerY" secondItem="Fjk-du-S0B" secondAttribute="centerY" constant="20" id="0B3-xJ-9xv"/>
+                                            <constraint firstAttribute="trailing" secondItem="vsb-tc-yt1" secondAttribute="trailing" constant="20" id="4g6-sQ-i6k"/>
+                                            <constraint firstItem="vsb-tc-yt1" firstAttribute="top" secondItem="qYl-xg-X29" secondAttribute="bottom" id="6ft-Ql-3QA"/>
+                                            <constraint firstAttribute="width" constant="320" id="9Iz-DP-EAi"/>
+                                            <constraint firstItem="qYl-xg-X29" firstAttribute="top" secondItem="GdU-8T-qfZ" secondAttribute="bottom" constant="30" id="DAq-iT-dvp"/>
+                                            <constraint firstItem="0fa-MV-afb" firstAttribute="top" secondItem="vsb-tc-yt1" secondAttribute="bottom" constant="5" id="Dgo-fi-a30"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zbj-JF-gQG" secondAttribute="bottom" constant="20" symbolic="YES" id="QEd-tc-aXQ"/>
+                                            <constraint firstItem="vsb-tc-yt1" firstAttribute="centerX" secondItem="Fjk-du-S0B" secondAttribute="centerX" id="Tft-k2-E8J"/>
+                                            <constraint firstItem="0fa-MV-afb" firstAttribute="centerX" secondItem="Fjk-du-S0B" secondAttribute="centerX" id="UHb-xr-gaC"/>
+                                            <constraint firstItem="0fa-MV-afb" firstAttribute="leading" secondItem="Fjk-du-S0B" secondAttribute="leading" constant="20" id="aYk-iw-hwb"/>
+                                            <constraint firstItem="GdU-8T-qfZ" firstAttribute="centerX" secondItem="Fjk-du-S0B" secondAttribute="centerX" id="bQW-YH-c4E"/>
+                                            <constraint firstItem="Zbj-JF-gQG" firstAttribute="centerX" secondItem="Fjk-du-S0B" secondAttribute="centerX" id="fIe-vo-d46"/>
+                                            <constraint firstItem="qYl-xg-X29" firstAttribute="centerX" secondItem="Fjk-du-S0B" secondAttribute="centerX" id="iey-Wt-Du4"/>
+                                            <constraint firstItem="vsb-tc-yt1" firstAttribute="leading" secondItem="Fjk-du-S0B" secondAttribute="leading" constant="20" id="jJJ-zf-tI2"/>
+                                            <constraint firstAttribute="trailing" secondItem="qYl-xg-X29" secondAttribute="trailing" constant="20" id="sNo-Ts-PjN"/>
+                                            <constraint firstAttribute="trailing" secondItem="0fa-MV-afb" secondAttribute="trailing" constant="20" id="tBh-Ny-UBr"/>
+                                            <constraint firstItem="qYl-xg-X29" firstAttribute="leading" secondItem="Fjk-du-S0B" secondAttribute="leading" constant="20" id="xLG-em-jeb"/>
+                                        </constraints>
                                     </customView>
                                     <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-XA-o4f">
-                                        <rect key="frame" x="744" y="472" width="744" height="464"/>
+                                        <rect key="frame" x="320" y="0.0" width="1338" height="936"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-HT-5Lo">
-                                                <rect key="frame" x="253" y="275" width="116" height="32"/>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-FR-6g2">
+                                                <rect key="frame" x="38" y="887" width="1272" height="24"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Converter Options" id="M9h-Pu-nZ2">
+                                                    <font key="font" metaFont="system" size="20"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ELB-dg-6zT">
+                                                <rect key="frame" x="38" y="870" width="1272" height="17"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Select option below to open converter details" id="HPo-di-fph">
+                                                    <font key="font" metaFont="system" size="14"/>
+                                                    <color key="textColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-HT-5Lo">
+                                                <rect key="frame" x="428" y="878" width="116" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="push" title="TXT -&gt; JSON" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6x3-V7-iua">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -728,21 +806,43 @@
                                                     <segue destination="wkN-y3-ren" kind="show" id="jMx-sG-JLl"/>
                                                 </connections>
                                             </button>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-FR-6g2">
-                                                <rect key="frame" x="28" y="415" width="688" height="24"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Select converter option below:" id="M9h-Pu-nZ2">
-                                                    <font key="font" metaFont="system" size="20"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
+                                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLC-fn-us0">
+                                                <rect key="frame" x="10" y="20" width="1318" height="830"/>
+                                                <clipView key="contentView" id="3EI-hh-8aA">
+                                                    <rect key="frame" x="1" y="1" width="1316" height="828"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <collectionView id="2w7-Nu-GAa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1316" height="158"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Fgz-aj-fxZ">
+                                                                <size key="itemSize" width="50" height="50"/>
+                                                            </collectionViewFlowLayout>
+                                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </collectionView>
+                                                    </subviews>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="JYp-bc-wYx">
+                                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tEP-s7-gST">
+                                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="8a7-HT-5Lo" firstAttribute="centerY" secondItem="y0d-XA-o4f" secondAttribute="centerY" constant="-60" id="46t-Db-CIJ"/>
-                                            <constraint firstItem="8a7-HT-5Lo" firstAttribute="centerX" secondItem="y0d-XA-o4f" secondAttribute="centerX" constant="-61" id="9sJ-qL-FAd"/>
-                                            <constraint firstItem="EbH-FR-6g2" firstAttribute="leading" secondItem="y0d-XA-o4f" secondAttribute="leading" constant="30" id="ATV-mq-ldQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="hLC-fn-us0" secondAttribute="bottom" constant="20" id="0oB-iE-Rop"/>
+                                            <constraint firstItem="hLC-fn-us0" firstAttribute="top" secondItem="ELB-dg-6zT" secondAttribute="bottom" constant="20" id="5IG-cu-uPh"/>
+                                            <constraint firstItem="hLC-fn-us0" firstAttribute="leading" secondItem="y0d-XA-o4f" secondAttribute="leading" constant="10" id="99Y-so-RPq"/>
+                                            <constraint firstItem="EbH-FR-6g2" firstAttribute="leading" secondItem="y0d-XA-o4f" secondAttribute="leading" constant="40" id="ATV-mq-ldQ"/>
+                                            <constraint firstItem="ELB-dg-6zT" firstAttribute="top" secondItem="EbH-FR-6g2" secondAttribute="bottom" id="HWf-NI-6gJ"/>
                                             <constraint firstItem="EbH-FR-6g2" firstAttribute="top" secondItem="y0d-XA-o4f" secondAttribute="top" constant="25" id="OQZ-Iv-2fW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ELB-dg-6zT" secondAttribute="trailing" constant="30" id="cRV-dk-2Kz"/>
+                                            <constraint firstItem="ELB-dg-6zT" firstAttribute="leading" secondItem="y0d-XA-o4f" secondAttribute="leading" constant="40" id="d40-os-EVK"/>
                                             <constraint firstAttribute="trailing" secondItem="EbH-FR-6g2" secondAttribute="trailing" constant="30" id="ek4-Ja-PQX"/>
+                                            <constraint firstAttribute="trailing" secondItem="hLC-fn-us0" secondAttribute="trailing" constant="10" id="kpN-YC-8uc"/>
                                         </constraints>
                                     </customView>
                                 </subviews>
@@ -764,6 +864,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="2w7-Nu-GAa" id="yjv-3P-h4V"/>
                         <outlet property="leftContentView" destination="Fjk-du-S0B" id="gLw-33-98j"/>
                         <outlet property="rightContentView" destination="y0d-XA-o4f" id="lRt-q2-Fyt"/>
                     </connections>
@@ -775,7 +876,7 @@
         <!--Darknet Txt To Json Controller-->
         <scene sceneID="4zI-nC-9QL">
             <objects>
-                <viewController storyboardIdentifier="DarknetTxtToJsonController" id="wkN-y3-ren" customClass="DarknetTxtToJsonController" customModule="DarknetToJson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DarknetTxtToJsonController" id="wkN-y3-ren" customClass="DarknetTxtToJsonController" customModule="Annotation_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="qAo-oo-eAl">
                         <rect key="frame" x="0.0" y="0.0" width="726" height="560"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -784,10 +885,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="726" height="560"/>
                                 <subviews>
                                     <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-hV-orY">
-                                        <rect key="frame" x="0.0" y="96" width="360" height="464"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="363" height="560"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8xy-Wv-0j8">
-                                                <rect key="frame" x="115" y="215" width="130" height="32"/>
+                                                <rect key="frame" x="117" y="263" width="130" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Process Images" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cF1-CL-aCo">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -798,7 +899,7 @@
                                                 </connections>
                                             </button>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CjB-UU-AMb">
-                                                <rect key="frame" x="127" y="262" width="106" height="16"/>
+                                                <rect key="frame" x="129" y="310" width="106" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="0 file(s) selected" id="Zdd-nL-Tq6">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -813,11 +914,11 @@
                                             <constraint firstItem="CjB-UU-AMb" firstAttribute="centerX" secondItem="9Gf-hV-orY" secondAttribute="centerX" id="v5Q-hH-OqC"/>
                                         </constraints>
                                     </customView>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="kDV-y3-sLy" customClass="DropView" customModule="DarknetToJson" customModuleProvider="target">
-                                        <rect key="frame" x="360" y="96" width="366" height="464"/>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="kDV-y3-sLy" customClass="DropView" customModule="Annotation_Converter" customModuleProvider="target">
+                                        <rect key="frame" x="363" y="0.0" width="363" height="560"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-lU-1P4">
-                                                <rect key="frame" x="158" y="227" width="50" height="50"/>
+                                                <rect key="frame" x="157" y="275" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="64u-ZR-mVV"/>
                                                     <constraint firstAttribute="width" constant="50" id="yqT-z1-ndd"/>
@@ -826,7 +927,7 @@
                                                 <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FD7-ln-bNZ">
-                                                <rect key="frame" x="145" y="188" width="77" height="19"/>
+                                                <rect key="frame" x="143" y="236" width="77" height="19"/>
                                                 <textFieldCell key="cell" controlSize="large" lineBreakMode="clipping" title=".txt Files" id="6TE-AI-wfI">
                                                     <font key="font" metaFont="systemBlack" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -834,7 +935,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-n5-LBS">
-                                                <rect key="frame" x="122" y="171" width="123" height="17"/>
+                                                <rect key="frame" x="120" y="219" width="123" height="17"/>
                                                 <textFieldCell key="cell" controlSize="large" lineBreakMode="clipping" title="drop your file here" id="USx-Yd-dLy">
                                                     <font key="font" metaFont="system" size="14"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -881,6 +982,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="convert" width="512" height="512"/>
         <image name="file" width="512" height="512"/>
     </resources>
 </document>

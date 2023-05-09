@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias Code = Encodable & Decodable
-
 class TxtToJsonConverter: ConvertableProtocol {
     func convertGeneric(_ paths: [String]) -> [DarknetTxtToJsonResponse]? {
         var allResponse = [DarknetTxtToJsonResponse]()
