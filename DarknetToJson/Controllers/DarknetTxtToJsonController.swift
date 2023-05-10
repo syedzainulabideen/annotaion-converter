@@ -22,6 +22,9 @@ class DarknetTxtToJsonController: NSViewController {
         self.view.layer?.backgroundColor = NSColor.white.cgColor
         self.optionView.layer?.backgroundColor = NSColor.white.cgColor
         self.inputView.delegate = self
+        
+        
+        self.preferredContentSize = NSSize(width: 600, height: 400)
     }
 
     override var representedObject: Any? {
@@ -31,7 +34,8 @@ class DarknetTxtToJsonController: NSViewController {
     }
     
     @IBAction func processFiles(_ button:NSButton) {
-        self.createJsonForFiles(currentFiles)
+        self.presentingViewController?.dismiss(self)
+//        self.createJsonForFiles(currentFiles)
     }
 }
 

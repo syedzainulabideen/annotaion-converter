@@ -14,6 +14,15 @@ enum ConverterOption: CaseIterable {
     case jsonXML
     case xmlTxt
     
+    var enabled:Bool {
+        switch self {
+        case .txtJson:
+            return true
+        default:
+            return false
+        }
+    }
+    
     var fromValue:String {
         switch self {
         case .txtJson:

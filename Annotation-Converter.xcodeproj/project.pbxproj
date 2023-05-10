@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241BF58F2A0B42BD0064F88D /* OptionItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241BF58E2A0B42BD0064F88D /* OptionItemView.xib */; };
+		241BF5912A0B4DEC0064F88D /* ReplacePresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241BF5902A0B4DEC0064F88D /* ReplacePresentationAnimator.swift */; };
 		8A7565C52A0A30730006B044 /* OptionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7565C32A0A30730006B044 /* OptionItemView.swift */; };
 		8A7565C82A0A4A590006B044 /* ConverterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7565C72A0A4A590006B044 /* ConverterOption.swift */; };
 		8A917D4C2A02432300846BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A917D4B2A02432300846BE0 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241BF58E2A0B42BD0064F88D /* OptionItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionItemView.xib; sourceTree = "<group>"; };
+		241BF5902A0B4DEC0064F88D /* ReplacePresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacePresentationAnimator.swift; sourceTree = "<group>"; };
 		8A7565C32A0A30730006B044 /* OptionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItemView.swift; sourceTree = "<group>"; };
 		8A7565C72A0A4A590006B044 /* ConverterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterOption.swift; sourceTree = "<group>"; };
 		8A917D482A02432300846BE0 /* Annotation-Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Annotation-Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,7 @@
 				8A917D4D2A02432300846BE0 /* ViewController.swift */,
 				8A917D5A2A02459C00846BE0 /* DragView.swift */,
 				8A7565C32A0A30730006B044 /* OptionItemView.swift */,
+				241BF58E2A0B42BD0064F88D /* OptionItemView.xib */,
 				8A917D672A08C33600846BE0 /* Controllers */,
 				8A917D6A2A08FD2B00846BE0 /* Converters */,
 				8A917D662A08B2E200846BE0 /* Helpers */,
@@ -97,6 +102,7 @@
 				8A917D612A08B0CA00846BE0 /* ProtocolsHelper.swift */,
 				8A917D5F2A08B09500846BE0 /* Extensions.swift */,
 				8A7565C72A0A4A590006B044 /* ConverterOption.swift */,
+				241BF5902A0B4DEC0064F88D /* ReplacePresentationAnimator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241BF58F2A0B42BD0064F88D /* OptionItemView.xib in Resources */,
 				8A917D502A02432600846BE0 /* Assets.xcassets in Resources */,
 				8A917D532A02432600846BE0 /* Main.storyboard in Resources */,
 			);
@@ -200,6 +207,7 @@
 				8A917D5B2A02459C00846BE0 /* DragView.swift in Sources */,
 				8A917D692A08C34F00846BE0 /* DarknetTxtToJsonController.swift in Sources */,
 				8A917D602A08B09500846BE0 /* Extensions.swift in Sources */,
+				241BF5912A0B4DEC0064F88D /* ReplacePresentationAnimator.swift in Sources */,
 				8A917D652A08B2A100846BE0 /* DarknetTxtToJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

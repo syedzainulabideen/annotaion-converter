@@ -48,7 +48,6 @@ class ViewController: NSViewController {
         collectionView.allowsMultipleSelection = true
         collectionView.enclosingScrollView?.borderType = .noBorder
         collectionView.register(OptionItemView.self, forItemWithIdentifier: photoItemIdentifier)
-//        collectionView.register(NSNib(nibNamed: "OptionItemView", bundle: nil), forItemWithIdentifier: photoItemIdentifier)
         configureFlowLayout()
     }
     
@@ -61,9 +60,9 @@ class ViewController: NSViewController {
         collectionView.collectionViewLayout = flowLayout
     }
     
-    func txtToJsonButtonPressed(_ button:NSButton) {
+    func txtToJsonButtonPressed() {
         guard let controller:DarknetTxtToJsonController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "DarknetTxtToJsonController") as? DarknetTxtToJsonController else { return }
-        self.view.window?.contentViewController = controller
+        self.presentAsSheet(controller)
     }
 }
 
@@ -81,7 +80,7 @@ extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegateFl
         guard let item = collectionView.makeItem(withIdentifier: photoItemIdentifier, for: indexPath) as? OptionItemView else { return NSCollectionViewItem() }
         
         let option = self.currentOption[indexPath.item]
-        item.configureCell(option.fromValue, to: option.toValue)
+        item.configureCell(option)
         return item
     }
     
@@ -89,7 +88,10 @@ extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegateFl
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
 
         guard let indexPath = indexPaths.first else { return }
-        
+        let option = currentOption[indexPath.item]
+        if option == .txtJson {
+            self.txtToJsonButtonPressed()
+        }
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {

@@ -16,17 +16,16 @@ class OptionItemView: NSCollectionViewItem {
         
         view.wantsLayer = true
         view.layer?.cornerRadius = 8.0
-        view.layer?.backgroundColor = NSColor.purple.cgColor
     }
     
-    func configureCell(_ from:String, to:String) {
-//        fromLabel.stringValue = from
-//        toLabel.stringValue = to
-//        debugPrint(fromLabel.stringValue)
-    }
-    
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        fromLabel.stringValue = "from"
+    func configureCell(_ option:ConverterOption) {
+        toLabel.stringValue = option.toValue
+        fromLabel.stringValue = option.fromValue
+        if option.enabled {
+            view.layer?.backgroundColor = NSColor.purple.cgColor
+        }
+        else {
+            view.layer?.backgroundColor = NSColor.lightGray.cgColor
+        }
     }
 }
