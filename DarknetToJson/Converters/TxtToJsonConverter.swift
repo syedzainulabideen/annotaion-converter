@@ -8,7 +8,7 @@
 import Foundation
 
 class TxtToJsonConverter: ConvertableProtocol {
-    func convertGeneric(_ paths: [String]) -> [DarknetTxtToJsonResponse]? {
+    func convertGeneric(_ paths: [String], fromPath:String, toPath:String) -> [DarknetTxtToJsonResponse]? {
         var allResponse = [DarknetTxtToJsonResponse]()
         for path in paths {
             do {
@@ -29,7 +29,6 @@ class TxtToJsonConverter: ConvertableProtocol {
                         let y = data[2].floatVal
                         let width = data[3].floatVal
                         let height = data[4].replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "\r", with: "").floatVal
-//                        print("\(label) - \(x),\(y),\(width),\(height)")
                         let anno = DarknetTxtToJsonResponse.Annotation(coordinates: DarknetTxtToJsonResponse.Coordinate(y: y, x: x, height: height, width: width), label: label)
                         annotations.append(anno)
                     }
@@ -39,9 +38,9 @@ class TxtToJsonConverter: ConvertableProtocol {
                     let option = DarknetTxtToJsonResponse(imagefilename: fileName, annotation: annotations)
                     allResponse.append(option)
                     
-                    let fromURL = URL(filePath: "/Users/mac8/Desktop/images/\(fileName)")
-                    let toURL = URL(filePath: "/Users/mac8/Desktop/dataset/\(fileName)")
-                    try FileManager.default.copyItem(at: fromURL, to: toURL)
+                    let fromURL = URL(filePath: "\(fromPath)/\(fileName)")
+                    let toURL = URL(filePath: "\(toPath)/\(fileName)")
+                    try FileManager.default.moveItem(at: fromURL, to: toURL)
                 }
             }
             catch {

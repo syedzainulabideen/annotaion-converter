@@ -17,7 +17,7 @@ class DropView: NSView {
         super.init(coder: coder)
 
         self.wantsLayer = true
-        self.layer?.backgroundColor = NSColor.black.cgColor
+        self.layer?.backgroundColor = NSColor.purple.cgColor
         registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
     }
 

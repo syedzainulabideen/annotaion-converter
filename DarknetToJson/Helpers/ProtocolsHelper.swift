@@ -13,5 +13,5 @@ protocol FileURLsProvider: AnyObject {
 
 
 protocol ConvertableProtocol: AnyObject {
-    func convertGeneric(_ paths: [String]) -> [DarknetTxtToJsonResponse]?
+    func convertGeneric(_ paths: [String], fromPath:String, toPath:String) -> [DarknetTxtToJsonResponse]?
 }
