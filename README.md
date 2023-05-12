@@ -2,6 +2,11 @@
 
 Annotation Converter is a macOS app that allows you to convert annotation files between different formats. With this app, you can easily convert your annotation files from TXT format to JSON format, making it more convenient for various applications.
 
+
+## **Screenshots**
+![App Screenshot](screenshots/dashboard.png)
+![App Screenshot](screenshots/txt-json-image.png)
+
 ## **Features**
 
 - Convert annotation files from TXT to JSON format.
